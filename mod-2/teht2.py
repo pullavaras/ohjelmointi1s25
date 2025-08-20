@@ -1,4 +1,4 @@
-#Kirjoita ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan. ympyrän pinta-ala on 2*pi*r
+#Ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan. ympyrän pinta-ala on 2*pi*r
 
 import math
 pi = math.pi
