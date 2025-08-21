@@ -6,5 +6,5 @@ import math
 käyttäjä = input('Anna suorakulmion kanta: ')
 käyttäjä = input('Anna suorakulmion korkeus: ')
 
-
+kanta = 
 
