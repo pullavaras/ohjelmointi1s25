@@ -1,5 +1,4 @@
-#  Kirjoita ohjelma, joka kysyy kolme kokonaislukua.
-#  Ohjelma tulostaa lukujen summan, tulon ja keskiarvon
+#  Kirjoita ohjelma, joka kysyy kolme kokonaislukua. Ohjelma tulostaa lukujen summan, tulon ja keskiarvon
 
 yy_str = input("Anna ensimmäinen kokonaisluku: ")
 yy = float(yy_str)

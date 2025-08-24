@@ -4,3 +4,5 @@
 
 # Vihje: tutustu random.randint()-funktion käyttöön.
 
+import random
+
