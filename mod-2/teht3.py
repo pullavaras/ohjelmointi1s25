@@ -2,14 +2,16 @@
 #Ohjelma tulostaa suorakulmion piirin ja pinta-alan.
 
 
-kanta_str = input('Anna suorakulmion kanta: ')
+kanta_str = input("Anna suorakulmion kanta: ")
 kanta = float(kanta_str)
-korkeus_str = input('Anna suorakulmion korkeus: ')
+
+korkeus_str = input("Anna suorakulmion korkeus: ")
 korkeus = float(korkeus_str)
 
 piiri = kanta * 2 + korkeus * 2
-print("Suorakulmion piiri on " + str(piiri))
+pintala = kanta * korkeus
 
-pintaala = kanta * korkeus
-print("Suorakulmion pinta-ala on " + str(pintaala))
+print("Suorakulmion piiri on " + str(piiri))
+print("Suorakulmion pinta-ala on " + str(pintala))
+
 

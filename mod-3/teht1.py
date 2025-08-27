@@ -10,6 +10,5 @@ alipaino = 37 - kala
 alipaino = str(alipaino)
 
 if kala < 37:
-    print("Laske kuha taikaisin veteen. Kuha on " + alipaino + " senttiä alimittaien.")
-
+    print("Laske kuha taikaisin veteen. Kuha on " + alipaino + " senttiä alimittainen.")
 
