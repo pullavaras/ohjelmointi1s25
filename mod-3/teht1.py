@@ -1,14 +1,9 @@
 
-# Kirjoita ohjelma, joka kysyy kalastajalta kuhan pituuden senttimetreinä.
-# Jos kuha on alamittainen, ohjelma käskee laskea kuhan takaisin järveen ilmoittaen samalla käyttäjälle,
-# montako senttiä alimmasta sallitusta pyyntimitasta puuttuu. Kuha on alamittainen, jos sen pituus on alle 37 cm.
 
-kala = input("Kuinka pitkä kalastamasi kuha on senttimetreissä? ")
-kala = float(kala)
+kuha = float(input("Kuinka pitkä pyydystämäsi kuha on senttimetreissä? "))
 
-alipaino = 37 - kala
-alipaino = str(alipaino)
+alimitta = 37 - kuha
+alimitta = str(alimitta)
 
-if kala < 37:
-    print("Laske kuha taikaisin veteen. Kuha on " + alipaino + " senttiä alimittainen.")
-
+if kuha < 37:
+    print("Kuha on " + alimitta + " senttiä liian lyhyt. Laske se takaisin veteen.")
