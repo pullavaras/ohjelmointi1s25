@@ -21,3 +21,5 @@ while True:
         print("Liian suuri arvaus.")
 
 
+
+
