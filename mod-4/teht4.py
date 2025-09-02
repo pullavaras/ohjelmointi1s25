@@ -5,3 +5,19 @@
 # lukuaan arvauskertojen välissä.
 
 
+import random
+
+luku = random.randint(1, 10)
+
+while True:
+    arvaus = int(input("Arvaa numero yhden ja kymmenen väliltä: "))
+
+    if arvaus == luku:
+        print("Arvasit oikein!")
+        break
+    elif arvaus < luku:
+        print("Liian pieni arvaus.")
+    else:
+        print("Liian suuri arvaus.")
+
+
