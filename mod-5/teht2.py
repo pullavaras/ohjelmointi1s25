@@ -1,12 +1,12 @@
 luvut = []
 
-numero = input("Anna luku tai lopeta painamalla enter: ")
+luku = input("Anna luku tai lopeta painamalla enter: ")
 
-while numero != "":
-    luku = int(numero)
+while luku != "":
+    luku = int(luku)
     luvut.append(luku)
-    numero = input("Anna luku tai lopeta painamalla enter: ")
+    luvut.sort(reverse=True)
+    luku = input("Anna luku tai lopeta painamalla enter: ")
 
-luvut.sort(reverse = True)
 
-print(f"Viisi suurinta lukua olivat {luvut[0:5]}.")
+print(f"Viisi suurinta lukua oli: {luvut[0:5]}")
