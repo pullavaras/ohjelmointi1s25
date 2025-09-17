@@ -1,11 +1,11 @@
 import random
 
-nopat = int(input("Anna noppien lukumäärä: "))
+montako = int(input("Kuinka monta arpakuutiota heitetään? "))
 
 summa = 0
 
-for i in range(nopat):
-    silmäluku = random.randint(1,6)
-    summa = summa + silmäluku
+for n in range(montako):
+    arpakuutio = random.randint(1,6)
+    summa = summa + arpakuutio
 
-print(f"Silmälukujen summa oli {summa} ")
+print(f"Silmälukujen summa oli {summa}")
