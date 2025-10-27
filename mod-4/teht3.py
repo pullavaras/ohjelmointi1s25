@@ -1,25 +1,17 @@
-luku = input("Anna luku: ")
+luku = input("Anna luku tai paina enter lopettaaksesi: ")
 
-if luku == "":
-    print("Lukua ei annettu.")
-
-else:
-    luku = int(luku)
-    pienin = luku
-    suurin = luku
-
+if int(luku):
+    suurin = int(luku)
+    pienin = int(luku)
     while True:
-        luku = input("Anna luku: ")
-
+        luku = input("Anna luku tai paina enter lopettaaksesi: ")
         if luku == "":
             break
-
         luku = int(luku)
-        if luku < pienin:
-            pienin = luku
         if luku > suurin:
             suurin = luku
+        if luku < pienin:
+            suurin = luku
+    print(f"Suurin luku: {suurin}\nPienin luku: {pienin}")
 
-
-    print(f"Pienin luku oli {pienin} ja suurin luku oli {suurin}.")
 

@@ -1,14 +1,14 @@
 import random
-pelaamassa = True
 
 def noppa():
-    return random.randint(1,6)
+    return random.randint(1, 6)
 
+pelaamassa = True
 while pelaamassa:
-    silmaluku=noppa()
-    print(f"Silmäluku oli: {silmaluku}")
-    if silmaluku == 6:
-        break
+    kuusi = noppa()
+    print(f"silmäluku: {kuusi}")
+    if kuusi == 6:
+        pelaamassa = False
 
 
 

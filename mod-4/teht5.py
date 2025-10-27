@@ -1,20 +1,15 @@
-kayttajatunnus = "python"
-salasana = "rules"
+kerrat = 0
 
-yritykset = 0
-
-while yritykset < 5:
-    kayttaja_k = input("Anna käyttäjätunnus: ")
-    kayttaja_s = input("Anna salasana: ")
-
-    if kayttaja_k == kayttajatunnus and kayttaja_s == salasana:
+while kerrat <= 5:
+    username = input("Anna käyttäjätunnus: ")
+    password = input("Anna salasana: ")
+    if  username == "python" and password == "rules":
         print("Tervetuloa.")
         break
-
     else:
-        print("Käyttäjätunnus tai salasana väärin.")
-        yritykset = yritykset + 1
-
+        print("Väärä käyttäjätunnus tai salasana.")
+        kerrat = kerrat + 1
 else:
     print("Pääsy evätty.")
+
 

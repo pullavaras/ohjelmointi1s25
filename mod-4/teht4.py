@@ -1,17 +1,13 @@
 import random
 
-oikein = random.randint(1,10)
+oikea_arvaus = random.randint(1,10)
 
-pelaamassa = True
-
-while pelaamassa:
-    arvaus = int(input("Tee arvaus välillä 1-10: "))
-
-    if arvaus == oikein:
-        print("Oikein!")
+while True:
+    arvaus = int(input("Arvaa numero välillä 1-10: "))
+    if arvaus == oikea_arvaus:
+        print("Arvasit oikein!")
         break
-    elif arvaus > oikein:
-        print("Liian suuri arvaus.")
-    elif arvaus < oikein:
+    elif arvaus < oikea_arvaus:
         print("Liian pieni arvaus.")
-
+    elif arvaus > oikea_arvaus:
+        print("Liian suuri arvaus.")
