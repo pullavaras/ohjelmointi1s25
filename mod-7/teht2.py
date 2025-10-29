@@ -1,16 +1,13 @@
-nimi = input("Anna nimi tai paina enter lopettaaksesi: ")
-
+nimi = input("Anna nimi: ")
 nimet = set()
 
 while nimi != "":
-    if nimi not in nimet:
-        print(f"{nimi} on uusi nimi.")
-        nimet.add(nimi)
-
+    if nimi in nimet:
+        print("Aiemmin syötetty nimi.")
     else:
-        print(f"{nimi} on aiemmin syötetty nimi.")
-
-    nimi = input("Anna nimi tai paina enter lopettaaksesi: ")
+        print("Uusi nimi")
+    nimet.add(nimi)
+    nimi = input("Anna nimi: ")
 
 for n in nimet:
     print(n)

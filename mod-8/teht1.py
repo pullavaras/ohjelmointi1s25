@@ -1,5 +1,16 @@
 import mysql.connector
 
+def haku(icao):
+    sql = f'SELECT ident, municipality FROM airport where ident = "{icao}"'
+    # print(sql)
+    kursori = yhteys.cursor()
+    kursori.execute(sql)
+    tulos = kursori.fetchall()
+    if kursori.rowcount > 0:
+        for rivi in tulos:
+            print(f"Lentokentän {rivi[0]} sijaintikunta on {rivi[1]}.")
+    return
+
 yhteys = mysql.connector.connect(
     host='localhost',
     port=3306,
@@ -9,21 +20,9 @@ yhteys = mysql.connector.connect(
     autocommit=True
 )
 
-def hae_lentokentta(icao, yhteys):
-    sql = "SELECT name, municipality FROM airport WHERE ident = %s"
-    kursori = yhteys.cursor()
-    kursori.execute(sql, (icao,))
-    tulos = kursori.fetchone()
-    kursori.close()
-
-    if tulos:
-        print(f"Lentokenttä on {tulos[0]}, sijainti on {tulos[1]}.")
-
-
-icao = input("Anna lentoaseman ICAO-koodi: ")
-hae_lentokentta(icao, yhteys)
+icao = input("Anna lentokentän ICAO-koodi: ")
+haku(icao)
 
 yhteys.close()
-
 
 

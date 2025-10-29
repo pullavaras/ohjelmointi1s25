@@ -1,31 +1,29 @@
 import mysql.connector
 
+def haku(maakoodi):
+    sql = f"SELECT type, count(*) FROM airport where iso_country = '{maakoodi}' group by type"
+    # print(sql)
+    kursori = yhteys.cursor()
+    kursori.execute(sql)
+    tulos = kursori.fetchall()
+    if kursori.rowcount > 0:
+        for rivi in tulos:
+            print(f"{rivi[0]} tyypin lentokenttiä on {rivi[1]} kappaletta.")
+    return
+
 yhteys = mysql.connector.connect(
     host='localhost',
-    port= 3306,
+    port=3306,
     database='flight_game',
     user='linneag',
     password='3852335587',
     autocommit=True
-    )
+)
 
-def lentokentat(maakoodi, yhteys):
-    sql = "SELECT type, COUNT(*) AS maara FROM airport Where iso_country = %s GROUP BY type"
-    kursori = yhteys.cursor()
-    kursori.execute(sql, (maakoodi,))
-    tulos = kursori.fetchall()
-    kursori.close()
-
-    print(f"Lentokentät maassa {maakoodi}:")
-    for tyyppi, maara in tulos:
-        print(f"Status: {tyyppi}, {maara} kpl")
-
-
-maa = input("Anna maakoodi: ")
-lentokentat(maa, yhteys)
+maakoodi = input("Anna lentokentän maakoodi: ")
+haku(maakoodi)
 
 yhteys.close()
-
 
 
 
